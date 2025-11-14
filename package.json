@@ -1,0 +1,27 @@
+{
+  "name": "citas_medicas",
+  "version": "1.0.0",
+  "description": "Proyecto para programacion web sobre citas medicas universitarias",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enuhar-cyber/citas_medicas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Enuhar-cyber/citas_medicas/issues"
+  },
+  "homepage": "https://github.com/Enuhar-cyber/citas_medicas#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3"
+  }
+}
