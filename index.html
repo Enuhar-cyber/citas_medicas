@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html" style="font-size: 24px;align-items: center;display: flex;">
+                <a class="navbar-brand" href="index.html" style="font-size: 24px;align-items: center;display: flex;" title="Volver a la pagina principal">
                     <i class="lni lni-zapier"></i>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +44,7 @@
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title" style="font-size: 24px;margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Consulta general</h5>
                     <p class="card-text flex-grow-1" style="margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Agenda un consulta general con nuestro médico.</p>
-                    <a href="#" class="btn btn-primary mt-auto">Agendar</a>
+                    <a class="btn btn-primary mt-auto" id="btnAgendarGeneral">Agendar</a>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title" style="font-size: 24px;margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Consulta psicologica</h5>
                     <p class="card-text flex-grow-1" style="margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Agenda un consulta con nuestro psicólogo.</p>   
-                    <a href="#" class="btn btn-primary mt-auto">Agendar</a>
+                    <a class="btn btn-primary mt-auto">Agendar</a>
                 </div>
             </div>
         </div>
@@ -62,14 +62,77 @@
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title" style="font-size: 24px;margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Consulta nutricional</h5>
                     <p class="card-text flex-grow-1" style="margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Agenda un consulta con nuestro nutricionista.</p>  
-                    <a href="#" class="btn btn-primary mt-auto">Agendar</a>
+                    <a class="btn btn-primary mt-auto">Agendar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title" style="font-size: 24px;margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Consulta odontologica</h5>
+                    <p class="card-text flex-grow-1" style="margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Agenda un consulta con nuestro odontólogo.</p>  
+                    <a class="btn btn-primary mt-auto">Agendar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title" style="font-size: 24px;margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Fisioterapia</h5>
+                    <p class="card-text flex-grow-1" style="margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Agenda un consulta con nuestro fisioterapeuta.</p>  
+                    <a class="btn btn-primary mt-auto">Agendar</a>
+                </div>
+            </div>
+        </div>
+         <div class="col-sm-6 col-lg-4">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title" style="font-size: 24px;margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Laboratorio Clinico</h5>
+                    <p class="card-text flex-grow-1" style="margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Toma de muestras y análisis básicos (sangre, orina) con resultados rápidos.</p>  
+                    <a class="btn btn-primary mt-auto">Agendar</a>
                 </div>
             </div>
         </div>
     </div>
-    <footer>
-        
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+                        <i class="lni lni-zapier"></i> Clínica Universitaria
+                    </h5>
+                    <p>
+                        Atención integral para estudiantes y personal administrativo. 
+                        Tu salud es nuestra prioridad académica.
+                    </p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold">Accesos</h5>
+                    <p><a href="index.html" class="text-white text-decoration-none">Inicio</a></p>
+                    <p><a href="services.html" class="text-white text-decoration-none">Servicios</a></p>
+                    <p><a href="#" class="text-white text-decoration-none">Acceso Médicos</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold">Contacto</h5>
+                    <p><i class="lni lni-home me-2"></i> Av. Universidad #123, Edificio C</p>
+                    <p><i class="lni lni-envelope me-2"></i> salud@universidad.edu</p>
+                    <p><i class="lni lni-phone me-2"></i> +52 55 1234 5678 (Citas)</p>
+                    <p><i class="lni lni-phone me-2"></i> +52 55 9110 0000 (Urgencias)</p>
+                </div>
+            </div>
+            <div class="row align-items-center" style="margin-top: 10px;align-items: center;text-align: center;display: flex; justify-content: center;">
+                <div class="col-md-7 col-lg-8" style="align-items: center;text-align: center;display: flex; justify-content: center;">
+                    <p>© 2025 Copyright: Clinica Universitaria</p>
+                </div>
+            </div>
+        </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        const btnAgendarGeneral = document.getElementById('btnAgendarGeneral');
+        btnAgendarGeneral.addEventListener('click', function() {
+            alert('¡Consulta agendada!');
+        });
+    </script>
 </body>
 </html>

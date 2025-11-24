@@ -2,6 +2,9 @@ body{
     background-color: #f4f4f4;
     font-family: sans-serif;
 }
+body, html {
+    overflow-x: hidden;
+}
 nav{
     background-color: #27658c;
     padding: 10px 0;
@@ -24,9 +27,14 @@ nav ul li a:hover{
     text-decoration: underline;
 }
 .hero{
-    background: #00B4DB;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #00B4DB; 
+    background: -webkit-linear-gradient(to bottom, #0083B0, #00B4DB);
+    background: linear-gradient(to bottom, #0083B0, #00B4DB); 
+    background-image: url(/img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #ffffff;
     padding: 100px 0;
     text-align: center;
@@ -40,6 +48,9 @@ nav ul li a:hover{
 .hero p{
     font-size: 18px;
     margin-bottom: 30px;
+}
+.card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
