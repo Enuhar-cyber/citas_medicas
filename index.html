@@ -88,34 +88,155 @@
             </div>
         </div>
     </div>
-    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
-        <div class="container text-center text-md-start">
-            <div class="row text-center text-md-start">
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
-                        <i class="lni lni-zapier"></i> Clínica Universitaria
-                    </h5>
-                    <p>
-                        Atención integral para estudiantes y personal administrativo. 
-                        Tu salud es nuestra prioridad académica.
-                    </p>
-                </div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold">Contacto</h5>
-                    <p><i class="lni lni-home me-2"></i> Av. Universidad #123, Edificio C</p>
-                    <p><i class="lni lni-envelope me-2"></i> salud@universidad.edu</p>
-                    <p><i class="lni lni-phone me-2"></i> +52 55 1234 5678 (Citas)</p>
-                    <p><i class="lni lni-phone me-2"></i> +52 55 9110 0000 (Urgencias)</p>
-                </div>
+    <!-- FOOTER -->
+<footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container text-center text-md-start">
+        <div class="row">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+                    <i class="lni lni-zapier"></i> Clínica Universitaria
+                </h5>
+                <p>
+                    Atención integral para estudiantes y personal administrativo.
+                    Tu salud es nuestra prioridad académica.
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold">Accesos</h5>
+                <p><a href="index.html" class="text-white">Inicio</a></p>
+                <p><a href="services.html" class="text-white">Servicios</a></p>
+                <p><a href="#" class="text-white">Acceso Médicos</a></p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold">Contacto</h5>
+                <p><i class="lni lni-home me-2"></i> Av. Universidad #123, Edificio C</p>
+                <p><i class="lni lni-envelope me-2"></i> salud@universidad.edu</p>
+                <p><i class="lni lni-phone me-2"></i> +52 55 1234 5678 (Citas)</p>
+                <p><i class="lni lni-phone me-2"></i> +52 55 9110 0000 (Urgencias)</p>
             </div>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script>
-        const btnAgendarGeneral = document.getElementById('btnAgendarGeneral');
-        btnAgendarGeneral.addEventListener('click', function() {
-            alert('¡Consulta agendada!');
-        });
-    </script>
+    </div>
+</footer>
+
+
+
+<!-- Modal agendar cita -->
+<div class="modal fade" id="modalCita" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Agendar cita</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="formCita">
+
+          <label class="form-label mt-2">Servicio</label>
+          <input type="text" class="form-control" id="servicio" readonly>
+
+          <label class="form-label mt-2">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" required>
+
+          <label class="form-label mt-2">Edad</label>
+          <input type="number" class="form-control" id="edad" required>
+
+          <label class="form-label mt-2">Fecha de nacimiento</label>
+          <input type="date" class="form-control" id="fecha_nac" required>
+
+          <label class="form-label mt-2">Sexo</label>
+          <select class="form-control" id="sexo" required>
+            <option value="">Seleccionar...</option>
+            <option>Masculino</option>
+            <option>Femenino</option>
+          </select>
+
+          <label class="form-label mt-2">Lugar de nacimiento</label>
+          <input type="text" class="form-control" id="lugar_nac" required>
+
+          <label class="form-label mt-2">Fecha de cita</label>
+          <input type="date" class="form-control" id="fecha" required>
+
+          <label class="form-label mt-2">Hora</label>
+          <input type="time" class="form-control" id="hora" required>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button class="btn btn-primary" id="btnGuardarCita">Guardar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  //alerta y modal
+  document.querySelectorAll('.card .btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const servicio = e.target.closest('.card').querySelector('.card-title').textContent.trim();
+
+      document.getElementById('servicio').value = servicio;
+      const modal = new bootstrap.Modal(document.getElementById('modalCita'));
+      modal.show();
+    });
+  });
+
+  // Enviar formulario y alerta
+  document.getElementById('btnGuardarCita').addEventListener('click', async () => {
+    const datos = {
+      servicio: document.getElementById('servicio').value,
+      nombre: document.getElementById('nombre').value,
+      edad: document.getElementById('edad').value,
+      fecha_nac: document.getElementById('fecha_nac').value,
+      sexo: document.getElementById('sexo').value,
+      lugar_nac: document.getElementById('lugar_nac').value,
+      fecha: document.getElementById('fecha').value,
+      hora: document.getElementById('hora').value
+    };
+
+    // validacio
+    if (!datos.nombre || !datos.fecha || !datos.hora) {
+      Swal.fire({ icon: 'warning', title: 'Falta información', text: 'Completa nombre, fecha y hora.' });
+      return;
+    }
+
+    try {
+      const res = await fetch("http://localhost:3000/agendar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(datos)
+      });
+
+      const json = await res.json();
+
+      if (res.ok) {
+        Swal.fire({ icon: 'success', title: 'Cita registrada', text: json.message || 'Guardada correctamente' });
+        
+        const modalEl = document.getElementById('modalCita');
+        const modalInst = bootstrap.Modal.getInstance(modalEl);
+        if (modalInst) modalInst.hide();
+        document.getElementById('formCita').reset();
+      } else {
+        Swal.fire({ icon: 'error', title: 'Error', text: json.error || 'No se pudo registrar la cita' });
+      }
+    } catch (err) {
+      console.error('Fetch error:', err);
+      Swal.fire({ icon: 'error', title: 'Error', text: 'No se pudo conectar con el servidor' });
+    }
+  });
+</script>
+
 </body>
 </html>

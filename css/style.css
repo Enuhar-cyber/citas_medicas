@@ -30,7 +30,7 @@ nav ul li a:hover{
     background: #00B4DB; 
     background: -webkit-linear-gradient(to bottom, #0083B0, #00B4DB);
     background: linear-gradient(to bottom, #0083B0, #00B4DB); 
-    background-image: url(/img/fondo.png);
+    background-image: url(../img/fondo.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
