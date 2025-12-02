@@ -12,7 +12,7 @@ app.use(express.json());
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root', 
-  password: '12345',
+  password: 'root',
   database: 'citas'
 });
 
@@ -60,6 +60,14 @@ app.post("/agendar", (req, res) => {
     return res.json({ message: "Registrado" });
   });
 });
+
+app.get("/api/citas", async (req, res) => {
+    db.query("SELECT nombre, fecha, servicio FROM citas", (err, results) => {
+        if (err) return res.status(500).json({ error: err });
+        res.json(results);
+    });
+});
+
 
 
 

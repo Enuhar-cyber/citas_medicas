@@ -3,240 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica universitaria</title>
+
     <link rel="stylesheet" href="css/style.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
-    <title>Clinica universitaria</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html" style="font-size: 24px;align-items: center;display: flex;" title="Volver a la pagina principal">
+                <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-size: 24px;" title="Volver a la pagina principal">
                     <i class="lni lni-zapier"></i>
                 </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav"> 
-                        <li>
-                            <a class="nav-link active" href="admin.html">Acceso medicos</a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" data-bs-toggle="modal" data-bs-target="#modalInicioSesion">Acceso medicos</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="hero">
-        <h1>Bienvenidos a la Clinica Universitaria</h1>
-        <p>Proporcionando atención médica de calidad a nuestra comunidad universitaria.</p>
+
+    <section class="hero text-center py-5">
+        <div class="container">
+            <h1>Bienvenidos a la Clinica Universitaria</h1>
+            <p>Proporcionando atención médica de calidad a nuestra comunidad universitaria.</p>
+        </div>
+    </section>
+
+    <main class="container mb-5">
+        <div class="row g-4">
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center mb-3">Consulta general</h5>
+                        <p class="card-text text-center flex-grow-1 mb-3">Agenda un consulta general con nuestro médico.</p>
+                        <button class="btn btn-primary mt-auto" data-service="Consulta general">Agendar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center mb-3">Consulta psicologica</h5>
+                        <p class="card-text text-center flex-grow-1 mb-3">Agenda un consulta con nuestro psicólogo.</p>
+                        <button class="btn btn-primary mt-auto" data-service="Consulta psicologica">Agendar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center mb-3">Consulta nutricional</h5>
+                        <p class="card-text text-center flex-grow-1 mb-3">Agenda un consulta con nuestro nutricionista.</p>
+                        <button class="btn btn-primary mt-auto" data-service="Consulta nutricional">Agendar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center mb-3">Consulta odontologica</h5>
+                        <p class="card-text text-center flex-grow-1 mb-3">Agenda un consulta con nuestro odontólogo.</p>
+                        <button class="btn btn-primary mt-auto" data-service="Consulta odontologica">Agendar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center mb-3">Fisioterapia</h5>
+                        <p class="card-text text-center flex-grow-1 mb-3">Agenda un consulta con nuestro fisioterapeuta.</p>
+                        <button class="btn btn-primary mt-auto" data-service="Fisioterapia">Agendar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center mb-3">Laboratorio Clinico</h5>
+                        <p class="card-text text-center flex-grow-1 mb-3">Toma de muestras y análisis básicos (sangre, orina) con resultados rápidos.</p>
+                        <button class="btn btn-primary mt-auto" data-service="Laboratorio Clinico">Agendar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+                        <i class="lni lni-zapier"></i> Clínica Universitaria
+                    </h5>
+                    <p>
+                        Atención integral para estudiantes y personal administrativo.
+                        Tu salud es nuestra prioridad académica.
+                    </p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold">Accesos</h5>
+                    <p>
+                        <a href="#" class="text-white" data-bs-toggle="modal" data-bs-target="#modalInicioSesion">Acceso Médicos</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold">Contacto</h5>
+                    <p><i class="lni lni-home me-2"></i> Av. Universidad #123, Edificio C</p>
+                    <p><i class="lni lni-envelope me-2"></i> salud@universidad.edu</p>
+                    <p><i class="lni lni-phone me-2"></i> +52 55 1234 5678 (Citas)</p>
+                    <p><i class="lni lni-phone me-2"></i> +52 55 9110 0000 (Urgencias)</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modales -->
+    <div class="modal fade" id="modalCita" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Agendar cita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <form id="formCita">
+                    <div class="modal-body">
+                        <div class="mb-2">
+                            <label class="form-label">Servicio</label>
+                            <input type="text" class="form-control" id="servicio" name="servicio" readonly>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Edad</label>
+                            <input type="number" class="form-control" id="edad" name="edad" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Fecha de nacimiento</label>
+                            <input type="date" class="form-control" id="fecha_nac" name="fecha_nac" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Sexo</label>
+                            <select class="form-select" id="sexo" name="sexo" required>
+                                <option value="">Seleccionar...</option>
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Lugar de nacimiento</label>
+                            <input type="text" class="form-control" id="lugar_nac" name="lugar_nac" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Fecha de cita</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Hora</label>
+                            <input type="time" class="form-control" id="hora" name="hora" required>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" id="btnGuardarCita">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="row g-4">
-        <div class="col-sm-6 col-lg-4">
-            <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title" style="font-size: 24px;margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Consulta general</h5>
-                    <p class="card-text flex-grow-1" style="margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Agenda un consulta general con nuestro médico.</p>
-                    <a class="btn btn-primary mt-auto" id="btnAgendarGeneral">Agendar</a>
+
+    <!-- Modal: Inicio de sesión -->
+    <div class="modal fade" id="modalInicioSesion" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Inicio de sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-            <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title" style="font-size: 24px;margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Consulta psicologica</h5>
-                    <p class="card-text flex-grow-1" style="margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Agenda un consulta con nuestro psicólogo.</p>   
-                    <a class="btn btn-primary mt-auto">Agendar</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-            <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title" style="font-size: 24px;margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Consulta nutricional</h5>
-                    <p class="card-text flex-grow-1" style="margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Agenda un consulta con nuestro nutricionista.</p>  
-                    <a class="btn btn-primary mt-auto">Agendar</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-            <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title" style="font-size: 24px;margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Consulta odontologica</h5>
-                    <p class="card-text flex-grow-1" style="margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Agenda un consulta con nuestro odontólogo.</p>  
-                    <a class="btn btn-primary mt-auto">Agendar</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-            <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title" style="font-size: 24px;margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Fisioterapia</h5>
-                    <p class="card-text flex-grow-1" style="margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Agenda un consulta con nuestro fisioterapeuta.</p>  
-                    <a class="btn btn-primary mt-auto">Agendar</a>
-                </div>
-            </div>
-        </div>
-         <div class="col-sm-6 col-lg-4">
-            <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title" style="font-size: 24px;margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Laboratorio Clinico</h5>
-                    <p class="card-text flex-grow-1" style="margin-bottom: 20px;align-items: center;text-align: center;display: flex; justify-content: center;">Toma de muestras y análisis básicos (sangre, orina) con resultados rápidos.</p>  
-                    <a class="btn btn-primary mt-auto">Agendar</a>
-                </div>
+
+                <form id="formInicioSesion">
+                    <div class="modal-body">
+                        <div class="mb-2">
+                            <label class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="usuario" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="contrasena" required>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <!-- FOOTER -->
-<footer class="bg-dark text-white pt-5 pb-4 mt-5">
-    <div class="container text-center text-md-start">
-        <div class="row">
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
-                    <i class="lni lni-zapier"></i> Clínica Universitaria
-                </h5>
-                <p>
-                    Atención integral para estudiantes y personal administrativo.
-                    Tu salud es nuestra prioridad académica.
-                </p>
-            </div>
 
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold">Accesos</h5>
-                <p><a href="index.html" class="text-white">Inicio</a></p>
-                <p><a href="services.html" class="text-white">Servicios</a></p>
-                <p><a href="#" class="text-white">Acceso Médicos</a></p>
-            </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold">Contacto</h5>
-                <p><i class="lni lni-home me-2"></i> Av. Universidad #123, Edificio C</p>
-                <p><i class="lni lni-envelope me-2"></i> salud@universidad.edu</p>
-                <p><i class="lni lni-phone me-2"></i> +52 55 1234 5678 (Citas)</p>
-                <p><i class="lni lni-phone me-2"></i> +52 55 9110 0000 (Urgencias)</p>
-            </div>
-        </div>
-    </div>
-</footer>
+    <script>
+        const modalCita = new bootstrap.Modal(document.getElementById('modalCita'));
+        const modalInicio = new bootstrap.Modal(document.getElementById('modalInicioSesion'));
 
+        document.querySelectorAll('[data-service]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.getElementById('servicio').value = btn.dataset.service;
+                modalCita.show();
+            });
+        });
 
+        document.getElementById('formCita').addEventListener('submit', async e => {
+            e.preventDefault();
 
-<!-- Modal agendar cita -->
-<div class="modal fade" id="modalCita" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
+            const datos = Object.fromEntries(new FormData(e.target).entries());
 
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title">Agendar cita</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
+            if (!datos.nombre.trim() || /\d/.test(datos.nombre)) {
+                Swal.fire({ icon: 'warning', title: 'Nombre inválido', text: 'El nombre no puede estar en blanco ni contener números.' });
+                return;
+            }
+            if(datos.edad < 18) {
+                Swal.fire({ icon: 'warning', title: 'Edad no permitida', text: 'La edad mínima para agendar una cita es 18 años.' });
+                return;
+            }
 
-      <div class="modal-body">
-        <form id="formCita">
+            if (!datos.nombre || !datos.fecha || !datos.hora) {
+                Swal.fire({ icon: 'warning', title: 'Falta información', text: 'Completa nombre, fecha y hora.' });
+                return;
+            }
 
-          <label class="form-label mt-2">Servicio</label>
-          <input type="text" class="form-control" id="servicio" readonly>
+            try {
+                const res = await fetch('http://localhost:3000/agendar', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(datos)
+                });
 
-          <label class="form-label mt-2">Nombre completo</label>
-          <input type="text" class="form-control" id="nombre" required>
+                const json = await res.json();
 
-          <label class="form-label mt-2">Edad</label>
-          <input type="number" class="form-control" id="edad" required>
+                if (res.ok) {
+                    Swal.fire({ icon: 'success', title: 'Cita registrada', text: json.message || 'Guardada correctamente' });
+                    modalCita.hide();
+                    e.target.reset();
+                } else {
+                    Swal.fire({ icon: 'error', title: 'Error', text: json.error || 'No se pudo registrar la cita' });
+                }
+            } catch (err) {
+                console.error('Fetch error:', err);
+                Swal.fire({ icon: 'error', title: 'Error', text: 'No se pudo conectar con el servidor' });
+            }
+        });
 
-          <label class="form-label mt-2">Fecha de nacimiento</label>
-          <input type="date" class="form-control" id="fecha_nac" required>
+        document.getElementById('formInicioSesion').addEventListener('submit', e => {
+            e.preventDefault();
+            const usuario = document.getElementById('usuario').value.trim();
+            const contrasena = document.getElementById('contrasena').value;
 
-          <label class="form-label mt-2">Sexo</label>
-          <select class="form-control" id="sexo" required>
-            <option value="">Seleccionar...</option>
-            <option>Masculino</option>
-            <option>Femenino</option>
-          </select>
-
-          <label class="form-label mt-2">Lugar de nacimiento</label>
-          <input type="text" class="form-control" id="lugar_nac" required>
-
-          <label class="form-label mt-2">Fecha de cita</label>
-          <input type="date" class="form-control" id="fecha" required>
-
-          <label class="form-label mt-2">Hora</label>
-          <input type="time" class="form-control" id="hora" required>
-
-        </form>
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button class="btn btn-primary" id="btnGuardarCita">Guardar</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<script>
-  //alerta y modal
-  document.querySelectorAll('.card .btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const servicio = e.target.closest('.card').querySelector('.card-title').textContent.trim();
-
-      document.getElementById('servicio').value = servicio;
-      const modal = new bootstrap.Modal(document.getElementById('modalCita'));
-      modal.show();
-    });
-  });
-
-  // Enviar formulario y alerta
-  document.getElementById('btnGuardarCita').addEventListener('click', async () => {
-    const datos = {
-      servicio: document.getElementById('servicio').value,
-      nombre: document.getElementById('nombre').value,
-      edad: document.getElementById('edad').value,
-      fecha_nac: document.getElementById('fecha_nac').value,
-      sexo: document.getElementById('sexo').value,
-      lugar_nac: document.getElementById('lugar_nac').value,
-      fecha: document.getElementById('fecha').value,
-      hora: document.getElementById('hora').value
-    };
-
-    // validacio
-    if (!datos.nombre || !datos.fecha || !datos.hora) {
-      Swal.fire({ icon: 'warning', title: 'Falta información', text: 'Completa nombre, fecha y hora.' });
-      return;
-    }
-
-    try {
-      const res = await fetch("http://localhost:3000/agendar", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(datos)
-      });
-
-      const json = await res.json();
-
-      if (res.ok) {
-        Swal.fire({ icon: 'success', title: 'Cita registrada', text: json.message || 'Guardada correctamente' });
-        
-        const modalEl = document.getElementById('modalCita');
-        const modalInst = bootstrap.Modal.getInstance(modalEl);
-        if (modalInst) modalInst.hide();
-        document.getElementById('formCita').reset();
-      } else {
-        Swal.fire({ icon: 'error', title: 'Error', text: json.error || 'No se pudo registrar la cita' });
-      }
-    } catch (err) {
-      console.error('Fetch error:', err);
-      Swal.fire({ icon: 'error', title: 'Error', text: 'No se pudo conectar con el servidor' });
-    }
-  });
-</script>
-
+            if (usuario === 'admin' && contrasena === '123456') {
+                modalInicio.hide();
+                window.location.href = 'admin.html';
+            } else {
+                Swal.fire({ icon: 'error', title: 'Error', text: 'Usuario o contraseña incorrectos' });
+            }
+        });
+    </script>
 </body>
 </html>
